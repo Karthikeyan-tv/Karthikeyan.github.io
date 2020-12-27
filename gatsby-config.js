@@ -1,9 +1,23 @@
 module.exports = {
   pathPrefix: "/octenon",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Octenon`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    menuLinks:[
+      {
+        name: `Home`,
+        link: `/`
+      },
+      {
+        name: `Blogs`,
+        link: `/blogs`
+      },
+      {
+        name: `About Me`,
+        link: `/about-me`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,6 +27,13 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-copy-files-enhanced',
+      options: {
+        source: `${__dirname}/CNAME`,
+        destination: `/*/`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

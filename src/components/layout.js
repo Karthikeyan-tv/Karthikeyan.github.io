@@ -18,6 +18,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -25,21 +29,26 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      
+      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
+          textDecoration: `none`
         }}
       >
         <main>{children}</main>
         <footer style={{
-          marginTop: `2rem`
+          marginTop: `2rem`,
+          textDecoration: `none`,
+          position: "absolute",
+          bottom: `20px`
         }}>
-          © {new Date().getFullYear()}, Built with
+          Copyright {new Date().getFullYear()},   
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="/" style={{textDecoration: `none`}}> Octenon</a>
         </footer>
       </div>
     </>
