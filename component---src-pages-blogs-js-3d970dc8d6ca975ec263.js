@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{Wo83:function(e,t,n){"use strict";n.r(t);var l=n("q1tI"),a=n.n(l),o=n("Bl7J"),r=(n("tBDR"),n("vrFN"));t.default=function(){return a.a.createElement(o.a,null,a.a.createElement(r.a,{title:"Home"}),a.a.createElement("h1",null,"Blogs"),a.a.createElement("p",null,"My blogs goes here."))}}}]);
-//# sourceMappingURL=component---src-pages-blogs-js-3d970dc8d6ca975ec263.js.map
